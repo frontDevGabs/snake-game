@@ -16,7 +16,7 @@ let score = 0;
 // Get high score from local storage
 
 let highScore = localStorage.getItem("high-score") || 0;
-highScoreElement.innerText = `High Score: ${highScore}`;
+highScoreElement.innerText = `Recorde: ${highScore}`;
 
 // Pass a random between 1 and 30 as food position
 
@@ -27,7 +27,7 @@ const updateFoodPosition = () => {
 
 const handleGameOver = () => {
   clearInterval(setIntervalId);
-  alert("Game Over! Press OK to replay...");
+  alert("Fim de Novo! Pressione OK para reiniciar...");
   location.reload();
 };
 
@@ -69,8 +69,8 @@ const initGame = () => {
     highScore = score >= highScore ? score : highScore; // if score > high score => high score = score
 
     localStorage.setItem("high-score", highScore);
-    scoreElement.innerText = `Score: ${score}`;
-    highScoreElement.innerText = `High Score: ${highScore}`;
+    scoreElement.innerText = `Pontuação: ${score}`;
+    highScoreElement.innerText = `Recorde: ${highScore}`;
   }
 
   // Update Snake Head
